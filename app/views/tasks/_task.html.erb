@@ -1,0 +1,21 @@
+<div class="well">
+	<div class="row">
+		<div class="col-md-8">
+			<table class="table table-striped">
+				<tr>
+					<td>Description:</td>
+					<td><%= link_to task.description, task, remote: true, method: :delete, data: { confirm: "Are You Sure?"}  %></td>
+				</tr>
+				<tr>
+					<td>Deadline</td>
+					<td><%= task.deadline %></td>
+				</tr>
+			</table>
+		</div>
+		<div class="col-md-4">
+			<div class="pull-right">
+				<%= link_to "Edit", edit_task_path(task), remote: true, class: "btn btn-warning" %>
+			</div>
+		</div>
+	</div>
+</div>

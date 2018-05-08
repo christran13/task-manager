@@ -1,0 +1,21 @@
+<div class="jumbotron">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <%= link_to new_task_path, remote: true, class:"btn btn-default", style:"margin-bottom: 20px;" do %><i class="fa fa-plus"></i> Create Task <% end %>
+
+        <div id="task-form" style="display: none;"></div>
+
+      </div>
+      <div class="col-md-8 col-md-offset-1">
+        <h3 style="text-align: center">Tasks</h3>
+        <ul>
+          <div id="tasks">
+            <%= render @tasks %>
+          </div>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
